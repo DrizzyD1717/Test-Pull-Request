@@ -18,3 +18,12 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
+
+document
+  .querySelector(".newsletter-form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+    const email = this.querySelector("input").value;
+    alert("Thank you for subscribing! Welcome to The Copper Barrel family.");
+    this.reset();
+  });
